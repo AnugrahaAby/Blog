@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop in HTML and CSS</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 10px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+            border-radius: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container" id="container"></div>
+    <script>
+        let i=1;
+        const container= document.getElementById('container');
+        while(i<=9){
+            const item= document.createElement('div')
+            item.className='item';
+            item.textContent=i;
+            container.appendChild(item);
+        i++;
+        }
+    </script>
+</body>
+</html>
